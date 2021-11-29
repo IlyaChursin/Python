@@ -15,21 +15,21 @@ def timefunc(func):
     return need_time
 
 @timefunc
-def square():
+def square(width,length):
     SQFT_PER_ACRE = 43560
-    width = float(input("Введите ширину участка в футах\n"))
-    length = float(input("Введите длину участка в футах\n"))
     result = (width * length) / SQFT_PER_ACRE
     print("Площадь в акрах ->", result)
 
 @timefunc
-def speed():
+def speed(hight):
     acceleration = 9.8
-    hight = float(input("Введите высоту в метрах\n"))
     result = math.sqrt(2*acceleration*hight)
     print("Скорость при касании земли ->", round(result))
 
 
+hight = float(input("Введите высоту в метрах\n"))
+speed(hight)
 
-speed()
-square()
+width = float(input("Введите ширину участка в футах\n"))
+length = float(input("Введите длину участка в футах\n"))
+square(width,length)
